@@ -1,0 +1,23 @@
+source! ~/.vimperatorrc.local
+
+" vim: set ft=vimperator:
+set titlestring=
+set toolbars=nonavigation
+set complete=s
+nnoremap j 5j
+nnoremap k 5k
+set hintchars=asdfghjklqwertyuiop
+nnoremap s :tabopen<Space>google<Space>
+inoremap <C-n> <Nop>
+set visualbell
+nnoremap <C-R> :restart<CR>
+vmap <silent> <C-g> y<Esc><Esc>P
+hi Hint font-family: Arial; font-size: 21px; font-weight: bold; text-shadow: -1px -1px 2px black, 1px -1px 2px black, -1px 1px 2px black, 1px 1px 2px black; color: #33cccc;
+hi HintElem color: gray; background-color: #a1e4e6;
+hi HintActive color: black; background-color: #ff8700;
+" コマンドラインではimeをOff
+style -name commandline-ime chrome://* #liberator-commandline-command input {ime-mode: inactive;}
+" h/lでタブ移動
+nnoremap h gT
+nnoremap l gt
+nnoremap sf :forvo<Space>
